@@ -1,0 +1,28 @@
+package ci_collection;
+
+
+import java.util.List;
+import java.util.Iterator;
+
+public class Question {
+	private int id;  
+	private String name;  
+	private List<String> answers;  
+	  
+	public Question() {}  
+	public Question(int id, String name, List<String> answers) {  
+	    super();  
+	    this.id = id;  
+	    this.name = name;  
+	    this.answers = answers;  
+	}  
+	  
+	public void displayInfo(){  
+	    System.out.println(id+"\n "+name);  
+	    System.out.println("answers are:");  
+	    Iterator<String> itr=answers.iterator();  
+	    while(itr.hasNext()){  
+	        System.out.println(itr.next());  
+	    }  
+	}  
+}
